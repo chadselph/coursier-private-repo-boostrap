@@ -22,7 +22,7 @@ curl https://launcher-path/tbd | sh -s -- <cs-install-args>
 
 for example
 ```bash
-curl https://launcher-path/tbd | sh -s -- -r https://somecompany.com/repo my-special-app cs
+curl https://launcher-path/tbd | sh -s -- --channel https://some-channel-url my-special-app cs
 ```
 
 this will install cs itself and my-special-app and add the somecompany.com repo to
