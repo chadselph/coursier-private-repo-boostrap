@@ -16,18 +16,31 @@ credentials in `.m2/settings.xml` or `.npmrc`.
 ### How to use
 
 
-```bash
-curl https://launcher-path/tbd | sh -s -- <cs-install-args>
+
+```console
+❯ curl -fLo cspb https://github.com/chadselph/coursier-private-repo-boostrap/releases/download/v0.1.0/coursier-private-repo-bootstrap &&
+     chmod +x cspb &&
+     ./cspb 
 ```
 
 for example
-```bash
-curl https://launcher-path/tbd | sh -s -- --channel https://some-channel-url my-special-app cs
+
+```console
+❯ curl -fLo cspb https://github.com/chadselph/coursier-private-repo-boostrap/releases/download/v0.1.0/coursier-private-repo-bootstrap &&
+     chmod +x cspb &&
+     ./cspb --channel https://some-channel-url my-special-app cs
+```
+
+Or you already have cs installed, you can launch it from cs
+
+```console
+cs launch -r typesafe:ivy-releases -r jitpack me.chadrs:coursier-private-repo-boostrap:v0.1 -M me.chadrs.csbootstrap.Launcher --channel https://some-channel-url my-special-app
 ```
 
 this will install cs itself and my-special-app and add the somecompany.com repo to
 the list of repositories. See [coursier install docs](https://get-coursier.io/docs/cli-install)
 for more options.
+
 
 ### Options
 
